@@ -1271,12 +1271,16 @@ neural network for 3D building</div>
 
 <div id="toast" class="bibtex-toast">BibTeX copied ✓</div>
 
-if (window.location.hash === "#colab") {
-    window.location.replace(
-      "https://colab.research.google.com/github/neuralprimitives/neuralprimitives.github.io/blob/main/demo/demo.ipynb"
-    );
-  }
-
+<script>
+  (function () {
+    const h = window.location.hash;
+    if (h === "#colab" || h.startsWith("#colab?")) {
+      window.location.replace(
+        "https://colab.research.google.com/github/neuralprimitives/neuralprimitives.github.io/blob/main/demo/demo.ipynb"
+      );
+    }
+  })();
+</script>
 
 </body>
 
