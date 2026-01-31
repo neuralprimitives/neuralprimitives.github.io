@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Neural Primitives Generalizable, Parametric, Scalable Scan-to-BIM">
+  <meta name="keywords" content="Point cloud completion, Equivariant vision">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neural Primitives Generalizable, Parametric, Scalable Scan-to-BIM</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.125.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.125.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.125.0/examples/js/loaders/OBJLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.125.0/examples/js/loaders/PLYLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.125.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.125.0/examples/js/loaders/DRACOLoader.js"></script>
+  <script src="./static/js/viewer.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navigation bar (currently disabled) -->
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation"> ... </nav> -->
+
+  <section class="hero">
+    <!-- Banner with overlay title -->
+  <div class="hero-banner">
+  <div class="hero-banner-inner">
+    <div class="hero-banner-title">
+      Neural Primitives<br>
+      Generalizable, Parametric, Scalable Scan-to-BIM
+      <div class="hero-banner-links">
+      <a class="button is-normal is-rounded btn-primary">
+        <span class="icon"><i class="fab fa-youtube"></i></span>
+        <span>Video (coming soon)</span>
+      </a>
+
+      <a class="button is-normal is-rounded btn-outline"
+         href="https://github.com/complete3d">
+        <span class="icon"><i class="fab fa-github"></i></span>
+        <span>Project website</span>
+      </a>
+    </div>
+    </div>
+
+    
+  </div>
+</div>
+    </div>
+  </section>
+
+
+  <!-- Sticky Jump Bar -->
+<nav class="jumpbar" aria-label="Section navigation">
+  <div class="jumpbar-inner">
+    <div class="jumpbar-left">
+      <span class="jumpbar-arrow">↓ Explore the project</span>
+    </div>
+
+    <div class="jumpbar-right">
+      <a class="jumpbar-link" href="#overview">Overview</a>
+      <a class="jumpbar-link" href="#capabilities">Capabilities</a>
+      <a class="jumpbar-link" href="#comparisons">Demo</a>
+      <a class="jumpbar-link" href="#framework">Framework</a>
+      <a class="jumpbar-link" href="#foundations">Foundations</a>
+    </div>
+  </div>
+</nav>
+
+
+
+  <section class="jump-section" id="overview">
+    <h2 class="title is-3" style="text-align: center; margin-bottom: 0.5rem;"> 👀 Overview</h2>
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- Normalization-free generalization, primitive-driven shape
+            completion, and topology-aware, scalable reconstruction -->
+  
+
+          <!-- Paper video -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="publication-video">
+            <video controls autoplay loop muted playsinline width="100%">
+              <source src="./video/video.mp4" type="video/mp4">
+
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="content has-text-centered">
+            <p>
+              We propose a SIM(3)-equivariant framework that infers neural primitives directly from raw scans.
+              This representation enables high-quality 3D reconstruction with explicit, verifiable topology. Our
+              framework can be applied to both exterior and interior settings and consolidates a series of our recent
+              advances into a single system that yields generalizable, parametric surface models and scales from
+              individual buildings to city blocks. As a result, it bridges the gap between raw scans and the actionable
+              models required by AECO workflows at operational scale.
+            </p>
+          </div>  
+  </div>
+ 
+</section>
+
+  <section class="jump-section" id="capbilities">
+    <h2 class="title is-3" style="text-align: center; margin-bottom: 4rem;">⚙️ Capabilities</h2>
+
+    
+    <div class="container is-max-desktop">
+       <img id="teaser" style="width: 70%; height: auto; display: block; margin: 0 auto;  margin-bottom: 3rem;"
+          src="./static/images/teaser.png" alt="VecUniCo teaser figure" />
+      <div class="content has-text-centered"> 
+      <p> Neural primitives provides three capabilities: normalization-free generalization, primitive-driven shape completion, and topology-aware, scalable reconstruction.</p>
+            </div>  
+    </div>    
+      
+ 
+</section>
+
+<section class="jump-section" id="comparisons">
+      <!-- <h2 class="title is-3" style="text-align: center; margin-bottom: 4rem;" >📊 Comparison with other methods</h2>
+  
+<div class="colab-cta-wrap">
+  <a class="colab-cta"
+     href="YOUR_COLAB_LINK_HERE"
+     target="_blank" rel="noopener">
+    <span class="colab-cta-icon">🚀</span>
+    <span>Try the Colab Demo</span>
+    <span class="colab-cta-arrow">→</span>
+  </a>
+</div> -->
+
+<h2 class="title is-3" style="text-align: center; margin-bottom: 4rem;" >📊 Comparison and Demo
+  <a class="colab-cta"
+   href="https://colab.research.google.com/github/neuralprimitives/neuralprimitives.github.io/blob/main/demo/demo.ipynb"
+   target="_blank" rel="noopener">
+  <img
+    class="colab-cta-icon"
+    src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlecolab.svg"
+    alt="Colab"
+  />
+  <span>Try Colab</span>
+  <span class="colab-cta-arrow">↗</span>
+</a>
+
+</h2>
+
+
+
+      <div class="content has-text-centered">
+        <p>Click a thumbnail to view the completion demo. Drag to rotate, scroll to zoom. <br>Use the slider to increase pose-and-scale deviation from the canonical configuration and compare methods under the same deviation.<br> Here, we compare with AdaPoinTr (TPAMI’23), SymmComplete (AAAI’25), and UniCo (’26).
+        </p>
+      </div>
+
+
+
+ <section class="section" id="comparison-building">
+    <div class="container is-max-desktop">
+       <h3 class="subtitle is-4 comparison-subtitle has-text-centered">
+      Outdoor
+    </h3>
+      <div id="comparison-grid-header-building" style="margin-bottom: 0.5rem;">
+        <div></div>
+        <div></div>
+        <div class="buttons is-centered is-flex-wrap-wrap" id="comparison-methods-building"
+          style="gap: 0.5rem; margin: 0;">
+          <button class="button is-small is-rounded is-link" type="button" data-method="ada" data-method-title="AdaPoinTr" data-default="truejv" >AdaPoinTr</button>
+          
+          <button class="button is-small is-rounded is-link" type="button" data-method="symm" data-method-title="SymmComplete" >SymmComplete</button>
+          <button class="button is-small is-rounded is-link" type="button" data-method="unico" data-method-title="UniCo" >UniCo</button>
+        </div>
+      </div>
+
+      <!-- ====== Three.js viewer box (same style logic as your comparison viewers) ====== -->
+      <div id="comparison-grid-viewers-building">
+        <div id="comparison-left-stack-building">
+          <!-- Input -->
+          <div id="input-viewer-building" style="
+      width:100%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      position:relative;
+      overflow:hidden;
+    ">
+            <div style="
+        position:absolute;
+        top:10px;
+        left:50%;
+        transform:translateX(-50%);
+        font-size:0.9rem;
+        font-weight:700;
+        background: rgba(255,255,255,0.75);
+        padding: 0.12rem 0.55rem;
+        border-radius: 999px;
+        color:#222;
+        pointer-events:none;
+      ">Input</div>
+
+            <div id="loader-input-building" style="
+        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        font-size:14px; text-align:center; color:#555; display:none;
+        background: rgba(255,255,255,0.85); padding: 10px 12px; border-radius: 8px;
+      ">
+              <div style="margin-bottom:8px;">Loading...</div>
+              <div style="width:160px;height:6px;background:#ddd;position:relative;border-radius:3px;overflow:hidden;">
+                <div id="progress-input-building" style="width:0%;height:100%;background: hsl(171, 100%, 41%);"></div>
+              </div>
+            </div>
+
+            <div id="placeholder-input-building" style="display:block;"></div>
+          </div>
+
+          <!-- GT -->
+          <div id="gt-viewer-building" style="
+      width:100%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      position:relative;
+      overflow:hidden;
+    ">
+            <div style="
+        position:absolute;
+        top:10px;
+        left:50%;
+        transform:translateX(-50%);
+        font-size:0.9rem;
+        font-weight:700;
+        background: rgba(255,255,255,0.75);
+        padding: 0.12rem 0.55rem;
+        border-radius: 999px;
+        color:#222;
+        pointer-events:none;
+      ">GT</div>
+
+            <div id="loader-gt-building" style="
+        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        font-size:14px; text-align:center; color:#555; display:none;
+        background: rgba(255,255,255,0.85); padding: 10px 12px; border-radius: 8px;
+      ">
+              <div style="margin-bottom:8px;">Loading...</div>
+              <div style="width:160px;height:6px;background:#ddd;position:relative;border-radius:3px;overflow:hidden;">
+                <div id="progress-gt-building" style="width:0%;height:100%;background: hsl(171, 100%, 41%);"></div>
+              </div>
+            </div>
+
+            <div id="placeholder-gt-building" style="display:block;"></div>
+          </div>
+        </div>
+
+        <!-- UniCo -->
+        <div>
+          <div id="vecunico-viewer-building" style="
+      width:100%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      position:relative;
+      overflow:hidden;
+    ">
+            <div style="
+        position:absolute;
+        top:10px;
+        left:50%;
+        transform:translateX(-50%);
+        font-size:0.9rem;
+        font-weight:700;
+        background: rgba(255,255,255,0.75);
+        padding: 0.12rem 0.55rem;
+        border-radius: 999px;
+        color:#222;
+        pointer-events:none;
+      ">Neural Primitive</div>
+
+            <div id="loader-vecunico-building" style="
+        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        font-size:14px; text-align:center; color:#555; display:none;
+        background: rgba(255,255,255,0.85); padding: 10px 12px; border-radius: 8px;
+      ">
+              <div style="margin-bottom:8px;">Loading...</div>
+              <div style="width:200px;height:6px;background:#ddd;position:relative;border-radius:3px;overflow:hidden;">
+                <div id="progress-unico-building" style="width:0%;height:100%;background: hsl(171, 100%, 41%);"></div>
+              </div>
+            </div>
+
+            <div id="placeholder-vecunico-building" style="display:block;"></div>
+          </div>
+        </div>
+
+        <!-- Method -->
+        <div>
+          <div id="method-viewer-building" style="
+      width:100%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      position:relative;
+      overflow:hidden;
+    ">
+            <!-- <div style="
+        position:absolute;
+        top:10px;
+        left:50%;
+        transform:translateX(-50%);
+        font-size:0.9rem;
+        font-weight:700;
+        background: rgba(255,255,255,0.75);
+        padding: 0.12rem 0.55rem;
+        border-radius: 999px;
+        color:#222;
+        pointer-events:none;
+      ">Method</div> -->
+      <div data-method-title style="
+  position:absolute;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:0.9rem;
+  font-weight:700;
+  background: rgba(255,255,255,0.75);
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  color:#222;
+">
+  Method
+</div>
+
+            <div id="loader-method-building" style="
+        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        font-size:14px; text-align:center; color:#555; display:none;
+        background: rgba(255,255,255,0.85); padding: 10px 12px; border-radius: 8px;
+      ">
+              <div style="margin-bottom:8px;">Loading...</div>
+              <div style="width:200px;height:6px;background:#ddd;position:relative;border-radius:3px;overflow:hidden;">
+                <div id="progress-method-building" style="width:0%;height:100%;background: hsl(171, 100%, 41%);"></div>
+              </div>
+            </div>
+
+            <div id="placeholder-method-building" style="display:block;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box" style="margin-top: 0.5rem;">
+        <div class="columns is-vcentered is-multiline">
+          <div class="column is-12">
+            <!-- <label class="label">Deviation strength</label> -->
+            <input class="slider is-fullwidth is-small is-info" id="deviation-slider-building" step="1" min="0"
+              max="239" value="0" type="range">
+            <p class="help has-text-centered">Left: canonical pose and scale; Right: maximum deviation.</p>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- ====== Thumbnail strip (use img/video as preview, but drives three.js mesh load) ====== -->
+      <div class="content has-text-centered" >
+        <div class="thumbnail-container" id="thumbnail-building">
+          <img src="static/data/building/bag_0518100000336675/thumbnail.png" data-sample="bag_0518100000336675"
+            data-method="ada" data-default="true">
+          <img src="static/data/building/bag_0518100000337695/thumbnail.png" data-sample="bag_0518100000337695"
+            data-method="ada">
+          <img src="static/data/building/bag_0518100000337296/thumbnail.png" data-sample="bag_0518100000337296"
+            data-method="ada">
+          <img src="static/data/building/bag_0518100000338796/thumbnail.png" data-sample="bag_0518100000338796"
+            data-method="ada">
+          <img src="static/data/building/bag_0518100000345768/thumbnail.png" data-sample="bag_0518100000345768"
+            data-method="ada">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+ <section class="section" id="comparison-abc">
+    <div class="container is-max-desktop">
+      <h3 class="subtitle is-4 comparison-subtitle has-text-centered">
+      Indoor
+    </h3>
+      <div id="comparison-grid-header-abc" style="margin-bottom: 0.5rem;">
+        <div></div>
+        <div></div>
+        <div class="buttons is-centered is-flex-wrap-wrap" id="comparison-methods-abc" style="gap: 0.5rem; margin: 0;">
+          <button class="button is-small is-rounded is-link" " type="button" data-method="ada" data-method-title="AdaPoinTr" data-default="true">AdaPoinTr</button>
+          
+          <button class="button is-small is-rounded is-link" " type="button" data-method="symm" data-method-title="SymmComplete" >SymmComplete</button>
+          <button class="button is-small is-rounded is-link"" type="button" data-method="unico" data-method-title="UniCo" >UniCo</button>
+        </div>
+      </div>
+
+      <!-- ====== Three.js viewer box (same style logic as your comparison viewers) ====== -->
+      <div id="comparison-grid-viewers-abc">
+        <div id="comparison-left-stack-abc">
+          <!-- Input -->
+          <div id="input-viewer-abc" style="
+      width:100%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      position:relative;
+      overflow:hidden;
+    ">
+            <div style="
+        position:absolute;
+        top:10px;
+        left:50%;
+        transform:translateX(-50%);
+        font-size:0.9rem;
+        font-weight:700;
+        background: rgba(255,255,255,0.75);
+        padding: 0.12rem 0.55rem;
+        border-radius: 999px;
+        color:#222;
+        pointer-events:none;
+      ">Input</div>
+
+            <div id="loader-input-abc" style="
+        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        font-size:14px; text-align:center; color:#555; display:none;
+        background: rgba(255,255,255,0.85); padding: 10px 12px; border-radius: 8px;
+      ">
+              <div style="margin-bottom:8px;">Loading...</div>
+              <div style="width:160px;height:6px;background:#ddd;position:relative;border-radius:3px;overflow:hidden;">
+                <div id="progress-input-abc" style="width:0%;height:100%;background: hsl(171, 100%, 41%);"></div>
+              </div>
+            </div>
+
+            <div id="placeholder-input-abc" style="display:block;"></div>
+          </div>
+
+          <!-- GT -->
+          <div id="gt-viewer-abc" style="
+      width:100%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      position:relative;
+      overflow:hidden;
+    ">
+            <div style="
+        position:absolute;
+        top:10px;
+        left:50%;
+        transform:translateX(-50%);
+        font-size:0.9rem;
+        font-weight:700;
+        background: rgba(255,255,255,0.75);
+        padding: 0.12rem 0.55rem;
+        border-radius: 999px;
+        color:#222;
+        pointer-events:none;
+      ">GT</div>
+
+            <div id="loader-gt-abc" style="
+        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        font-size:14px; text-align:center; color:#555; display:none;
+        background: rgba(255,255,255,0.85); padding: 10px 12px; border-radius: 8px;
+      ">
+              <div style="margin-bottom:8px;">Loading...</div>
+              <div style="width:160px;height:6px;background:#ddd;position:relative;border-radius:3px;overflow:hidden;">
+                <div id="progress-gt-abc" style="width:0%;height:100%;background: hsl(171, 100%, 41%);"></div>
+              </div>
+            </div>
+
+            <div id="placeholder-gt-abc" style="display:block;"></div>
+          </div>
+        </div>
+
+        <!-- UniCo -->
+        <div>
+          <div id="vecunico-viewer-abc" style="
+      width:100%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      position:relative;
+      overflow:hidden;
+    ">
+            <div style="
+        position:absolute;
+        top:10px;
+        left:50%;
+        transform:translateX(-50%);
+        font-size:0.9rem;
+        font-weight:700;
+        background: rgba(255,255,255,0.75);
+        padding: 0.12rem 0.55rem;
+        border-radius: 999px;
+        color:#222;
+        pointer-events:none;
+      ">Neural Primitive</div>
+
+            <div id="loader-vecunico-abc" style="
+        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        font-size:14px; text-align:center; color:#555; display:none;
+        background: rgba(255,255,255,0.85); padding: 10px 12px; border-radius: 8px;
+      ">
+              <div style="margin-bottom:8px;">Loading...</div>
+              <div style="width:200px;height:6px;background:#ddd;position:relative;border-radius:3px;overflow:hidden;">
+                <div id="progress-vecunico-abc" style="width:0%;height:100%;background: hsl(171, 100%, 41%);"></div>
+              </div>
+            </div>
+
+            <div id="placeholder-vecunico-abc" style="display:block;"></div>
+          </div>
+        </div>
+
+        <!-- Method -->
+        <div>
+          <div id="method-viewer-abc" style="
+      width:100%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      position:relative;
+      overflow:hidden;
+    ">
+<div data-method-title style="
+  position:absolute;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:0.9rem;
+  font-weight:700;
+  background: rgba(255,255,255,0.75);
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  color:#222;
+">
+  Method
+</div>
+
+            <div id="loader-method-abc" style="
+        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        font-size:14px; text-align:center; color:#555; display:none;
+        background: rgba(255,255,255,0.85); padding: 10px 12px; border-radius: 8px;
+      ">
+              <div style="margin-bottom:8px;">Loading...</div>
+              <div style="width:200px;height:6px;background:#ddd;position:relative;border-radius:3px;overflow:hidden;">
+                <div id="progress-method-abc" style="width:0%;height:100%;background: hsl(171, 100%, 41%);"></div>
+              </div>
+            </div>
+
+            <div id="placeholder-method-abc" style="display:block;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box" style="margin-top: 0.5rem;">
+        <div class="columns is-vcentered is-multiline">
+          <div class="column is-12">
+            <!-- <label class="label">Deviation strength</label> -->
+            <input class="slider is-fullwidth is-small is-info" id="deviation-slider-abc" step="1" min="0" max="239"
+              value="0" type="range">
+            <p class="help has-text-centered">Left: canonical pose and scale; Right: maximum deviation.</p>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- ====== Thumbnail strip (use img/video as preview, but drives three.js mesh load) ====== -->
+      <div class="content has-text-centered">
+        <div class="thumbnail-container" id="thumbnail-abc">
+          <img src="static/data/abc/00034753/thumbnail.png" data-sample="00034753"
+            data-method="ada" data-default="true">
+          <img src="static/data/abc/00561182/thumbnail.png" data-sample="00561182"
+            data-method="ada">
+          <img src="static/data/abc/00953617/thumbnail.png" data-sample="00953617"
+            data-method="ada">
+          <img src="static/data/abc/00084458/thumbnail.png" data-sample="00084458"
+            data-method="ada">
+          <img src="static/data/abc/00363552/thumbnail.png" data-sample="00363552"
+            data-method="ada">
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+
+      <style>
+        .thumbnail-container img,
+        .thumbnail-container video {
+          transition: all 0.3s ease;
+          border: 3px solid transparent;
+          cursor: pointer;
+
+          flex: 0 0 auto;
+          width: auto;
+          height: 120px;
+          object-fit: cover;
+          max-width: none;
+          border-radius: 8px;
+        }
+
+         .thumbnail-container img:hover, .thumbnail-container video:hover {
+        border: 6px solid #43a3f6; 
+        transform: scale(1.45);
+        z-index: 10;
+      }
+
+        .thumbnail-selected {
+          transform: scale(1.15);
+          border: 6px solid #79b4f2 !important;
+          box-shadow: 0 0 10px rgba(121, 180, 242, 0.5);
+          z-index: 10;
+          position: relative;
+        }
+         .thumbnail-container {
+          display: flex;
+          justify-content: center;  
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          gap: 10px;
+          padding: 10px 40px 10px 40px;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: thin;
+          align-items: center;
+        }
+  
+
+        .thumbnail-container::-webkit-scrollbar {
+          height: 6px;
+        }
+
+        .thumbnail-container::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 10px;
+        }
+
+        .thumbnail-container::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 10px;
+        }
+
+        .thumbnail-container::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+
+        @media (max-width: 768px) {
+          #qualitative-viewer {
+            height: 420px;
+          }
+
+          .thumbnail-container img,
+          .thumbnail-container video {
+            height: 100px;
+          }
+        }
+      </style>
+
+</section>
+
+
+<!-- maybe a video here, from overview to 3 blocks -->
+<section class="jump-section" id="framework">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center; margin-bottom: 1rem;">🏗️ How it works</h2>
+    <div class="hero-body">
+      <img id="architecture" style="width: 100%; height: auto; display: block; margin: 0 auto; margin-bottom: 3rem;"
+        src="./static/images/architecture.png" alt="VecUniCo architecture" />
+      
+      
+        <div class="content has-text-centered">
+            <p>
+        We rethink scan-to-BIM as fitting neural primitives directly to raw scans, bridging parametric completion and surface reconstruction. 
+        The organizing principle is simple: infer primitives first, partition space second, and reconstruct the model last
+            </p>
+        </div>
+    </div>
+  </div>
+
+
+
+<section class="jump-section" id="bim">
+      <!-- <h2 class="title is-3" style="text-align: center; margin-bottom: 4rem;" > BIM</h2> -->
+      <h3 class="subtitle is-4 comparison-subtitle has-text-centered">
+      Scan-to-BIM Reconstruction Results
+    </h3>
+    <div class="container is-max-desktop">
+       <div id="comparison-grid-header-bim" style="margin-bottom: 0.5rem;">
+        <div></div>
+        <div></div>
+        <!-- <div class="buttons is-centered is-flex-wrap-wrap" id="comparison-methods-bim"
+          style="gap: 0.5rem; margin: 0;">
+          <button class="button is-small is-rounded" type="button" data-method="ada" data-method-title="AdaPoinTr" data-default="truejv">AdaPoinTr</button>
+          
+          <button class="button is-small is-rounded" type="button" data-method="symm" data-method-title="SymmComplete" >SymmComplete</button>
+          <button class="button is-small is-rounded" type="button" data-method="unico" data-method-title="UniCo" >UniCo</button>
+        </div> -->
+      </div>
+
+      <!-- ====== Three.js viewer box (same style logic as your comparison viewers) ====== -->
+      <div id="comparison-grid-viewers-bim">
+        <div id="comparison-left-stack-bim">
+          <!-- Input -->
+          <div id="input-viewer-bim" style="
+      width:100%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      position:relative;
+      overflow:hidden;
+    ">
+            <div style="
+        position:absolute;
+        top:10px;
+        left:50%;
+        transform:translateX(-50%);
+        font-size:0.9rem;
+        font-weight:700;
+        background: rgba(255,255,255,0.75);
+        padding: 0.12rem 0.55rem;
+        border-radius: 999px;
+        color:#222;
+        pointer-events:none;
+      ">Input</div>
+
+            <div id="loader-input-bim" style="
+        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        font-size:14px; text-align:center; color:#555; display:none;
+        background: rgba(255,255,255,0.85); padding: 10px 12px; border-radius: 8px;
+      ">
+              <div style="margin-bottom:8px;">Loading...</div>
+              <div style="width:160px;height:6px;background:#ddd;position:relative;border-radius:3px;overflow:hidden;">
+                <div id="progress-input-bim" style="width:0%;height:100%;background: hsl(171, 100%, 41%);"></div>
+              </div>
+            </div>
+
+            <div id="placeholder-input-bim" style="display:block;"></div>
+          </div>
+
+          <!-- GT -->
+          <div id="gt-viewer-bim" style="
+      width:100%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      position:relative;
+      overflow:hidden;
+    ">
+            <div style="
+        position:absolute;
+        top:10px;
+        left:50%;
+        transform:translateX(-50%);
+        font-size:0.9rem;
+        font-weight:700;
+        background: rgba(255,255,255,0.75);
+        padding: 0.12rem 0.55rem;
+        border-radius: 999px;
+        color:#222;
+        pointer-events:none;
+      ">GT</div>
+
+            <div id="loader-gt-bim" style="
+        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        font-size:14px; text-align:center; color:#555; display:none;
+        background: rgba(255,255,255,0.85); padding: 10px 12px; border-radius: 8px;
+      ">
+              <div style="margin-bottom:8px;">Loading...</div>
+              <div style="width:160px;height:6px;background:#ddd;position:relative;border-radius:3px;overflow:hidden;">
+                <div id="progress-gt-bim" style="width:0%;height:100%;background: hsl(171, 100%, 41%);"></div>
+              </div>
+            </div>
+
+            <div id="placeholder-gt-bim" style="display:block;"></div>
+          </div>
+        </div>
+
+        <!-- UniCo -->
+        <div>
+          <div id="primitive-viewer-bim" style="
+      width:100%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      position:relative;
+      overflow:hidden;
+    ">
+            <div style="
+        position:absolute;
+        top:10px;
+        left:50%;
+        transform:translateX(-50%);
+        font-size:0.9rem;
+        font-weight:700;
+        background: rgba(255,255,255,0.75);
+        padding: 0.12rem 0.55rem;
+        border-radius: 999px;
+        color:#222;
+        pointer-events:none;
+      ">Primitive Inference</div>
+
+            <div id="loader-vecunico-bim" style="
+        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        font-size:14px; text-align:center; color:#555; display:none;
+        background: rgba(255,255,255,0.85); padding: 10px 12px; border-radius: 8px;
+      ">
+              <div style="margin-bottom:8px;">Loading...</div>
+              <div style="width:200px;height:6px;background:#ddd;position:relative;border-radius:3px;overflow:hidden;">
+                <div id="progress-vecunico-bim" style="width:0%;height:100%;background: hsl(171, 100%, 41%);"></div>
+              </div>
+            </div>
+
+            <div id="placeholder-vecunico-bim" style="display:block;"></div>
+          </div>
+        </div>
+
+        <!-- Method -->
+        <div>
+          <div id="vecunico-viewer-bim" style="
+      width:100%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      position:relative;
+      overflow:hidden;
+    ">
+<div data-method-title style="
+  position:absolute;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:0.9rem;
+  font-weight:700;
+  background: rgba(255,255,255,0.75);
+  padding: 0.12rem 0.55rem;
+  border-radius: 999px;
+  color:#222;
+">
+ Model Reconstruction 
+</div>
+
+            <div id="loader-primitive-bim" style="
+        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        font-size:14px; text-align:center; color:#555; display:none;
+        background: rgba(255,255,255,0.85); padding: 10px 12px; border-radius: 8px;
+      ">
+              <div style="margin-bottom:8px;">Loading...</div>
+              <div style="width:200px;height:6px;background:#ddd;position:relative;border-radius:3px;overflow:hidden;">
+                <div id="progress-primitive-bim" style="width:0%;height:100%;background: hsl(171, 100%, 41%);"></div>
+              </div>
+            </div>
+
+            <div id="placeholder-primitive-bim" style="display:block;"></div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- ====== Thumbnail strip (use img/video as preview, but drives three.js mesh load) ====== -->
+      <div class="content has-text-centered">
+        <div class="thumbnail-container" id="thumbnail-bim">
+          <img src="static/data/bim/00005229/thumbnail.png" data-sample="00005229"
+            data-method="ada" data-default="true">
+          <img src="static/data/bim/bag_0518100000336675/thumbnail.png" data-sample="bag_0518100000336675"
+            data-method="ada">
+          <!-- <img src="static/data/bim/00953617/thumbnail.png" data-sample="00953617"
+            data-method="ada">
+          <img src="static/data/bim/00363552/thumbnail.png" data-sample="00363552"
+            data-method="ada">
+          <img src="static/data/bim/00084458/thumbnail.png" data-sample="00084458"
+            data-method="ada"> -->
+        </div>
+      </div>
+
+
+    </div>
+
+</section>
+</section>
+
+
+
+<section class="jump-section" id="foundations">
+  <div class="container is-max-desktop">
+  <h2 class="title is-3" style="text-align: center; margin-bottom: 4rem;">📚 Research Foundations</h2>
+  <div class="content has-text-centered">
+            <p>
+        Neural primitives is built upon a series of innovative research works.
+            </p>
+        </div>
+
+  <div class="paper-grid">
+   
+
+    
+    <!-- ===== Card 3 ===== -->
+    <article class="paper-card">
+      <div class="paper-year">2026</div>
+
+      <a class="paper-thumb" href="PAPER_URL_3" target="_blank" rel="noopener">
+        <img src="./static/papers/unico.png" alt="UniCo first page">
+      </a>
+
+      <div class="paper-text">
+        <div class="paper-name">UniCo</div>
+        <div class="paper-desc">Unified Completion with</div>
+        <div class="paper-desc">Neural Primitives</div>
+        <div class="paper-venue">  2026 </div>
+      </div>
+
+      <div class="paper-actions">
+        <a class="paper-btn paper-btn-primary" href="https://arxiv.org/abs/2601.00759" target="_blank" rel="noopener">Paper</a>
+        <button class="paper-btn paper-btn-ghost" onclick="toggleBib(this)"  data-bib-id="bib-unico">BibTeX</button>
+      </div>
+      <pre class="bibtex-panel" hidden></pre>
+      <script type="text/plain" id="bib-unico">
+@article{chen2026unico,
+  title={Unified Primitive Proxies for Structured Shape Completion},
+  author={Zhaiyu Chen and Yuqing Wang and Xiao Xiang Zhu},
+  journal={arXiv preprint arXiv:2601.00759},
+  year={2026}
+}
+</script>
+    </article>
+
+    <!-- ===== Card 2 ===== -->
+    <article class="paper-card">
+  <div class="paper-year">2025</div>
+
+  <a class="paper-thumb" href="PAPER_URL_2" target="_blank" rel="noopener">
+    <img src="./static/papers/simeco.png" alt="SiMeCo first page">
+  </a>
+
+  <div class="paper-text">
+    <div class="paper-name">SIMECO</div>
+    <div class="paper-desc">Learning Generalizable Shape</div>
+    <div class="paper-desc">Completion with SIM(3) Equivariance</div>
+    <div class="paper-venue">NeurIPS 2025</div>
+  </div>
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary"
+       href="https://arxiv.org/abs/2509.26631"
+       target="_blank" rel="noopener">
+      Paper
+    </a>
+    <button class="paper-btn paper-btn-ghost"
+            data-bib-id="bib-simeco">
+      BibTeX
+    </button>
+  </div>
+
+  <pre class="bibtex-panel"></pre>
+
+  <script type="text/plain" id="bib-simeco">
+@article{wang2025simeco,
+  title = {Learning Generalizable Shape Completion with SIM(3) Equivariance},
+  journal = {Advances in Neural Information Processing Systems},
+  year = {2025},
+  author = {Wang, Yuqing and Chen, Zhaiyu and Zhu, Xiao Xiang},
+}
+  </script>
+</article>
+
+
+  
+     <!-- ===== Card 1 ===== -->
+<article class="paper-card">
+  <div class="paper-year">2025</div>
+
+  <a class="paper-thumb" href="PAPER_URL_1" target="_blank" rel="noopener">
+    <img src="./static/papers/paco.png" alt="PaCo first page">
+  </a>
+
+  <div class="paper-text">
+    <div class="paper-name">PaCo</div>
+    <div class="paper-desc">Parametric Point Cloud Completion</div>
+    <div class="paper-desc">for Polygonal Surface Reconstruction</div>
+    <div class="paper-venue">CVPR 2025</div>
+  </div>
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary"
+       href="https://arxiv.org/abs/2503.08363"
+       target="_blank" rel="noopener">
+      Paper
+    </a>
+    <button class="paper-btn paper-btn-ghost"
+            data-bib-id="bib-paco">
+      BibTeX
+    </button>
+  </div>
+
+  <pre class="bibtex-panel"></pre>
+
+  <script type="text/plain" id="bib-paco">
+@article{chen2025paco,
+  title = {Parametric Point Cloud Completion for Polygonal Surface Reconstruction},
+  journal = {IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year = {2025},
+  author = {Chen, Zhaiyu and Wang, Yuqing and Nan, Liangliang and Zhu, Xiao Xiang},
+}
+  </script>
+</article>
+
+
+      <!-- ===== Card 4 ===== -->
+<article class="paper-card">
+  <div class="paper-year">2025</div>
+
+  <a class="paper-thumb" href="PAPER_URL_4" target="_blank" rel="noopener">
+    <img src="./static/papers/abspy.png" alt="abspy first page">
+  </a>
+
+  <div class="paper-text">
+    <div class="paper-name">abspy</div>
+    <div class="paper-desc">A Python package for 3D adaptive</div>
+    <div class="paper-desc">binary space partitioning and modeling</div>
+    <div class="paper-venue">JOSS 2025</div>
+  </div>
+
+  <div class="paper-actions">
+    <a class="paper-btn paper-btn-primary"
+       href="https://joss.theoj.org/papers/10.21105/joss.07946"
+       target="_blank" rel="noopener">
+      Paper
+    </a>
+    <button class="paper-btn paper-btn-ghost"
+            data-bib-id="bib-abspy">
+      BibTeX
+    </button>
+  </div>
+
+  <pre class="bibtex-panel"></pre>
+
+  <script type="text/plain" id="bib-abspy">
+@article{chen2025abspy,
+  title = {abspy: A Python Package for 3D Adaptive Binary Space Partitioning and Modeling},
+  journal = {Journal of Open Source Software},
+  year = {2025},
+  author = {Chen, Zhaiyu},
+  doi = {10.21105/joss.07946},
+}
+  </script>
+</article>
+
+    <!-- ===== Card 5 ===== -->
+    <article class="paper-card">
+      <div class="paper-year">2024</div>
+      <a class="paper-thumb" href="PAPER_URL_5" target="_blank" rel="noopener">
+        <img src="./static/papers/polygnn.png" alt="Paper 5 first page">
+      </a>
+      <div class="paper-text">
+        <div class="paper-name">PolyGNN</div>
+        <div class="paper-desc">Polyhedron-based graph
+neural network for 3D building</div>
+        <div class="paper-desc">reconstruction from point clouds</div>
+        <div class="paper-venue">ISPRS 2024</div>
+      </div>
+      <div class="paper-actions">
+        <a class="paper-btn paper-btn-primary" href="https://www.sciencedirect.com/science/article/pii/S0924271624003691" target="_blank" rel="noopener">Paper</a>
+        <button class="paper-btn paper-btn-ghost" data-bib-id="bib-polygnn">BibTeX</button>
+      </div>
+      <pre class="bibtex-panel" hidden></pre>
+      <script type="text/plain" id="bib-polygnn">@article{chen2024polygnn,
+  title = {PolyGNN: Polyhedron-based Graph Neural Network for 3D Building Reconstruction from Point Clouds},
+  journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
+  volume = {218},
+  pages = {693-706},
+  year = {2024},
+  issn = {0924-2716},
+  doi = {10.1016/j.isprsjprs.2024.09.031},
+  author = {Chen, Zhaiyu and Shi, Yilei and Nan, Liangliang and Xiong, Zhitong and Zhu, Xiao Xiang},
+}</script>
+    </article>
+
+    <!-- ===== Card 6 ===== -->
+    <article class="paper-card">
+      <div class="paper-year">2022</div>
+      <a class="paper-thumb" href="PAPER_URL_6" target="_blank" rel="noopener">
+        <img src="./static/papers/points2poly.png" alt="Paper 6 first page">
+      </a>
+      <div class="paper-text">
+        <div class="paper-name">Points2Poly</div>
+        <div class="paper-desc">Reconstructing compact building</div>
+        <div class="paper-desc">models from point clouds using</div>
+        <div class="paper-desc">deep implicit fields</div>
+        <div class="paper-venue">ISPRS 2022</div>
+      </div>
+      <div class="paper-actions">
+        <a class="paper-btn paper-btn-primary" href="https://www.sciencedirect.com/science/article/pii/S0924271622002611" target="_blank" rel="noopener">Paper</a>
+        <button class="paper-btn paper-btn-ghost" data-bib-id="bib-points2poly">BibTeX</button>
+      </div>
+      <pre class="bibtex-panel" hidden></pre>
+      <script type="text/plain" id="bib-points2poly">
+        
+@article{chen2022points2poly,
+  title = {Reconstructing Compact Building Models from Point Clouds using Deep Implicit Fields},
+  journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
+  volume = {194},
+  pages = {58-73},
+  year = {2022},
+  issn = {0924-2716},
+  doi = {10.1016/j.isprsjprs.2022.09.017},
+  author = {Chen, Zhaiyu and Ledoux, Hugo and Khademi, Seyran and Nan, Liangliang},
+}
+     </script>   
+    </article>
+  </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- <section class="resources-section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center; margin-bottom: 4rem;">Explore additional resources</h2>
+
+    <div class="resources-grid">
+      
+      <a class="resource-card" href="https://arxiv.org/abs/2509.26631" target="_blank">
+        <span>SIMECO research paper</span>
+        <span class="arrow">→</span>
+      </a>
+
+     
+      <a class="resource-card" href="https://arxiv.org/abs/2503.08363" target="_blank">
+        <span>PaCo research paper</span>
+        <span class="arrow">→</span>
+      </a>
+
+      
+      <a class="resource-card" href="https://arxiv.org/abs/2601.00759" target="_blank">
+        <span>Unico research paper</span>
+        <span class="arrow">→</span>
+      </a>
+
+      
+      <a class="resource-card" href="https://github.com/chenzhaiyu/abspy" target="_blank">
+        <span>abspy download</span>
+        <span class="arrow">→</span>
+      </a>
+
+      
+      <a class="resource-card" href="https://github.com/chenzhaiyu/polygnn" target="_blank">
+        <span>PolyGNN project page</span>
+        <span class="arrow">→</span>
+      </a>
+
+      
+      <a class="resource-card" href="LINK_6" target="_blank">
+        <span>Points2Poly project page</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section> -->
+
+
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{chen2025unico,
+    title     = {Parametric Point Cloud Completion for Polygonal Surface Reconstruction},
+    author    = {Zhaiyu Chen and Yuqing Wang and Liangliang Nan and Xiao Xiang Zhu},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2025},
+    pages     = {11749-11758}
+}</code>
+<code>@article{wang2025simeco,
+      title={Learning Generalizable Shape Completion with SIM(3) Equivariance}, 
+      author={Yuqing Wang and Zhaiyu Chen and Xiao Xiang Zhu},
+      journal={arXiv preprint arXiv:2509.26631},
+      year={2025}
+}</code>
+<code>@article{chen2026unico,
+      title={Unified Primitive Proxies for Structured Shape Completion}, 
+      author={Zhaiyu Chen and Yuqing Wang and Xiao Xiang Zhu},
+      journal={arXiv preprint arXiv:2601.00759},
+      year={2026}
+}</code>
+  </pre>
+    </div>
+  </section> -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              Website template from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+              and licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<div id="toast" class="bibtex-toast">BibTeX copied ✓</div>
+</body>
+
+</html>
