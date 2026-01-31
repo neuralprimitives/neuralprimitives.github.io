@@ -1115,7 +1115,8 @@ group.startPrimitiveCarousel = function(primitiveids, {
     if (!c || !c.running) return;
 
     const v = group.primitiveViewer;
-    if (!v || v.loading) return;
+    // if (!v || v.loading) return;
+    if (!v) return; if (v.loading) { setTimeout(tick, 50); return; }
 
     if (c.idx >= c.ids.length) {
       if (!c.loop) { group.stopPrimitiveCarousel(); return; }
