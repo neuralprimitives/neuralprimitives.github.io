@@ -1642,8 +1642,8 @@ async function getBlueFaceListForPrimitive(datasetDir, sampleId, method, group, 
   if (_blueFaceCache.has(url)) return _blueFaceCache.get(url);
 
   const promise = (async () => {
-    // const res = await fetch(url, { cache: "force-cache" });
-    const res = await fetch(url, { cache: "reload" });
+    const res = await fetch(url, { cache: "force-cache" });
+    // const res = await fetch(url, { cache: "reload" });
     if (!res.ok) return [];
 
     const data = await res.json();
