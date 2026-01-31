@@ -723,7 +723,9 @@
         <div class="content has-text-justified">
             <p>
         We rethink scan-to-BIM as fitting <em>neural primitives</em> directly to raw scans, bridging parametric completion and surface reconstruction. 
-        The organizing principle is simple: infer primitives first, partition space second, and reconstruct the model last
+       SIM(3)-equivariant inference stabilizes primiitve predictions under pose and scale variation without manual normalization. 
+       Instead of dense geometry, the system infers compact parametric primitive proxies, yielding interpretable and consistent representations.
+      These primitives induce an adaptive plane arrangement and a linear cell complex with exact topology, on which primitive assembly reconstruction selects a coherent subset of cells via either graph-based selection or MRF-regularized implicit occupancy labeling.
             </p>
         </div>
     </div>
