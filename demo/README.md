@@ -161,8 +161,8 @@ bash ./scripts/dist_train.sh 2 12345 \
 **Neural Primitives** builds on a series of prior and complementary research efforts.
 For readers interested in **modular or standalone components**, please refer to the following repositories:
 
-* **[SIMECO](https://github.com/complete3d/simeco)**
-* **[PaCo](https://github.com/complete3d/paco)**
 * **[abspy](https://github.com/chenzhaiyu/abspy)**
 * **[PolyGNN](https://github.com/chenzhaiyu/polygnn)**
-
+* **[PaCo](https://github.com/complete3d/paco)**
+* **[SIMECO](https://github.com/complete3d/simeco)**
+* **[UniCo](https://github.com/complete3d/unico)**
