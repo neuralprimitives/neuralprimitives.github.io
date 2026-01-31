@@ -16,7 +16,7 @@ You can run the demo in **two ways**:
 
 ## ☁️ Google Colab (Recommended)
 
-[<img src="https://colab.research.google.com/assets/colab-badge.svg" height="32"/>](https://colab.research.google.com/github/neural_primitive/neural_primitive/blob/main/demo.ipynb)
+[<img src="https://colab.research.google.com/assets/colab-badge.svg" height="32"/>](https://colab.research.google.com/github/neuralprimitives/neuralprimitives.github.io/blob/main/demo/demo.ipynb)
 
 👉 Click the badge above
 
