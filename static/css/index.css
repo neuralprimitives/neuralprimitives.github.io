@@ -1,5 +1,6 @@
 body {
   font-family: 'Noto Sans', sans-serif;
+  overflow-y: auto;
 }
 
 .hero-banner {
@@ -32,6 +33,8 @@ body {
 
   width: min(900px, 90%);   /* ✅ 关键：给一个宽度，左对齐才稳定 */
 }
+
+
 
 .hero-banner-links {
   margin-top: 1.5rem;
@@ -108,7 +111,11 @@ html { scroll-behavior: smooth; }
   color: #3a4a5a;
 }
 
+.jumpbar-left {
+  display: none;
+}
 .jumpbar-right{
+  margin-left: auto;
   display: flex;
   gap: 1.2rem;
   align-items: center;
@@ -642,6 +649,7 @@ margin: 0 0 22px 0,
 }
 
 
+/* 
 .colab-cta{
   display: inline-flex;
   align-items: center;
@@ -650,9 +658,9 @@ margin: 0 0 22px 0,
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
 
-  background: #fff;;        /* 非常淡的蓝 */
-  border: 1px solid #d6e2ff;  /* 蓝色边框 */
-  color: #2f5fd7;             /* 稍深的学术蓝 */
+  background: #fff;;        
+  border: 1px solid #d6e2ff;  
+  color: #2f5fd7;             
 
   font-size: 0.75rem;
   font-weight: 500;
@@ -667,14 +675,12 @@ margin: 0 0 22px 0,
   background: #e3ecff;
   border-color: #bcd2ff;
   color: #244fc5;
-}
+} */
 
-/* Colab SVG icon */
-.colab-cta-icon{
+/* .colab-cta-icon{
   width: 14px;
   height: 14px;
 
-  /* 把原本黑色 SVG 变成和文字一致的中性灰 */
   filter: brightness(0) saturate(100%) invert(33%)
           sepia(74%) saturate(420%) hue-rotate(200deg)
           brightness(95%) contrast(90%);
@@ -682,13 +688,69 @@ margin: 0 0 22px 0,
   opacity: 0.8;
 
   vertical-align: middle;
+} */
+
+.colab-cta-arrow{
+  font-size: 1.3em;
+  opacity: 0.8;
+  font-weight: 600; 
 }
 
-/* 右上箭头更轻一点 */
-.colab-cta-arrow{
-  font-size: 0.75em;
-  opacity: 0.7;
+.colab-cta{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;              /* 原来 0.4 */
+
+  padding: 0.5rem 1rem;     /* 原来 0.35rem 0.75rem */
+  border-radius: 999px;
+
+  background: #3273dc;          /* hover 对比更明显 */
+  border-color: none;
+  color: white;
+
+  font-size: 0.85rem;       /* ⭐ 原来 0.75rem */
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  text-decoration: none;
+  margin-left: 0.8rem;
+
+  transition: all 0.15s ease;
 }
+
+
+.colab-cta:hover{
+    background-color: #2759a5;
+  color: white;
+  box-shadow: 0 3px 10px rgba(47,95,215,0.22);
+}
+
+/* .colab-cta-icon{
+  width: 16px;
+  height: 16px;
+
+  filter: brightness(0) saturate(100%)
+          invert(28%)
+          sepia(92%)
+          saturate(680%)
+          hue-rotate(215deg)
+          brightness(102%)
+          contrast(105%);
+
+  opacity: 0.9;
+  vertical-align: middle;
+} */
+
+.colab-cta-icon{
+  width: 16px;
+  height: 16px;
+
+  filter: invert(1);   /* ⭐ 直接变白 */
+  opacity: 0.95;
+
+  vertical-align: middle;
+}
+
 
 
 /* 默认：浅 */

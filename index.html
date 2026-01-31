@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Neural Primitives Generalizable, Parametric, Scalable Scan-to-BIM">
+  <meta name="description" content="Neural Primitives Towards Generalizable, Reliable, Scalable Scan-to-BIM">
   <meta name="keywords" content="Point cloud completion, Equivariant vision">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Neural Primitives Generalizable, Parametric, Scalable Scan-to-BIM</title>
+  <title>Neural Primitives Towards Generalizable, Reliable, Scalable Scan-to-BIM</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -49,8 +49,11 @@
   <div class="hero-banner">
   <div class="hero-banner-inner">
     <div class="hero-banner-title">
-      Neural Primitives<br>
-      Generalizable, Parametric, Scalable Scan-to-BIM
+      Neural Primitives 🏙️ <br>
+      <span style="font-size: 0.80em;">
+    Towards Generalizable, Reliable, Scalable Scan-to-BIM
+  </span>
+
       <div class="hero-banner-links">
       <a class="button is-normal is-rounded btn-primary">
         <span class="icon"><i class="fab fa-youtube"></i></span>
@@ -92,7 +95,7 @@
 
 
   <section class="jump-section" id="overview">
-    <h2 class="title is-3" style="text-align: center; margin-bottom: 0.5rem;"> 👀 Overview</h2>
+    <h2 class="title is-3" style="text-align: center; margin-bottom: 0.5rem;"> 🧭 Overview</h2>
     <div class="container is-max-desktop">
       <div class="hero-body">
         <!-- Normalization-free generalization, primitive-driven shape
@@ -112,9 +115,9 @@
       </div>
     </div>
 
-     <div class="content has-text-centered">
+     <div class="content has-text-justified">
             <p>
-              We propose a SIM(3)-equivariant framework that infers neural primitives directly from raw scans.
+              We propose a SIM(3)-equivariant framework that infers <em>neural primitives</em> directly from raw scans.
               This representation enables high-quality 3D reconstruction with explicit, verifiable topology. Our
               framework can be applied to both exterior and interior settings and consolidates a series of our recent
               advances into a single system that yields generalizable, parametric surface models and scales from
@@ -133,8 +136,8 @@
     <div class="container is-max-desktop">
        <img id="teaser" style="width: 70%; height: auto; display: block; margin: 0 auto;  margin-bottom: 3rem;"
           src="./static/images/teaser.png" alt="VecUniCo teaser figure" />
-      <div class="content has-text-centered"> 
-      <p> Neural primitives provides three capabilities: normalization-free generalization, primitive-driven shape completion, and topology-aware, scalable reconstruction.</p>
+      <div class="content has-text-justified"> 
+      <p> <em>Neural primitives</em> provides three capabilities: normalization-free generalization, primitive-driven shape completion, and topology-aware, scalable reconstruction.</p>
             </div>  
     </div>    
       
@@ -154,7 +157,7 @@
   </a>
 </div> -->
 
-<h2 class="title is-3" style="text-align: center; margin-bottom: 4rem;" >📊 Comparison and Demo
+<h2 class="title is-3" style="text-align: center; margin-bottom: 4rem;" >📊 Demonstration
   <a class="colab-cta"
    href="https://colab.research.google.com/github/neuralprimitives/neuralprimitives.github.io/blob/main/demo/demo.ipynb"
    target="_blank" rel="noopener">
@@ -170,12 +173,12 @@
 </h2>
 
 
-
-      <div class="content has-text-centered">
-        <p>Click a thumbnail to view the completion demo. Drag to rotate, scroll to zoom. <br>Use the slider to increase pose-and-scale deviation from the canonical configuration and compare methods under the same deviation.<br> Here, we compare with AdaPoinTr (TPAMI’23), SymmComplete (AAAI’25), and UniCo (’26).
+<div class="container is-max-desktop">
+      <div class="content has-text-justified">
+        <p>Click a thumbnail to view the completion demo. Drag to rotate, scroll to zoom. Use the slider to increase pose-and-scale deviation from the canonical configuration and compare methods under the same deviation. Here, we compare with AdaPoinTr (TPAMI’23), SymmComplete (AAAI’25), and UniCo (’26).
         </p>
       </div>
-
+</div>
 
 
  <section class="section" id="comparison-building">
@@ -717,9 +720,9 @@
         src="./static/images/architecture_new.png" alt="VecUniCo architecture" />
       
       
-        <div class="content has-text-centered">
+        <div class="content has-text-justified">
             <p>
-        We rethink scan-to-BIM as fitting neural primitives directly to raw scans, bridging parametric completion and surface reconstruction. 
+        We rethink scan-to-BIM as fitting <em>neural primitives</em> directly to raw scans, bridging parametric completion and surface reconstruction. 
         The organizing principle is simple: infer primitives first, partition space second, and reconstruct the model last
             </p>
         </div>
@@ -734,7 +737,9 @@
       Scan-to-BIM Reconstruction Results
     </h3>
     <div class="container is-max-desktop">
+      <div class="content has-text-centered">Click a thumbnail to view the reconstruction demo. Drag to rotate, scroll to zoom. </div>
        <div id="comparison-grid-header-bim" style="margin-bottom: 0.5rem;">
+        
         <div></div>
         <div></div>
         <!-- <div class="buttons is-centered is-flex-wrap-wrap" id="comparison-methods-bim"
@@ -862,7 +867,7 @@
         font-size:14px; text-align:center; color:#555; display:none;
         background: rgba(255,255,255,0.85); padding: 10px 12px; border-radius: 8px;
       ">
-              <div style="margin-bottom:8px;">Loading...</div>
+             <div style="margin-bottom:8px;">Loading...</div>
               <div style="width:200px;height:6px;background:#ddd;position:relative;border-radius:3px;overflow:hidden;">
                 <div id="progress-vecunico-bim" style="width:0%;height:100%;background: hsl(171, 100%, 41%);"></div>
               </div>
@@ -947,7 +952,7 @@
   <h2 class="title is-3" style="text-align: center; margin-bottom: 4rem;">📚 Research Foundations</h2>
   <div class="content has-text-centered">
             <p>
-        Neural primitives is built upon a series of innovative research works.
+        <em>Neural primitives</em> is built upon a series of innovative research works.
             </p>
         </div>
 
@@ -1265,6 +1270,9 @@ neural network for 3D building</div>
   </footer>
 
 <div id="toast" class="bibtex-toast">BibTeX copied ✓</div>
+
+
+
 </body>
 
 </html>
