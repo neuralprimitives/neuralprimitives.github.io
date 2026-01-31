@@ -1,0 +1,9 @@
+NAME: BuildingNL
+N_POINTS: 16384
+num_renderings: 2
+NUM_PLANES: 40
+category_file_path: ./data/BuildingNL/BuildingNL.json #data/BuildingNL/demo_small/BuildingNL.json #
+large_file_path: ./data/BuildingNL/file_large.json
+input_points_path:  ./data/BuildingNL/pc_all.h5 #data/BuildingNL/demo_small/partial/%s/%02d.las #
+complete_points_path: ./data/BuildingNL/gt_all.h5 #data/BuildingNL/demo_small/complete/%s.ply #
+complete_planes_path: ./data/BuildingNL/gt_plane_all.h5
