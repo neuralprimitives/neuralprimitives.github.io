@@ -38,9 +38,8 @@ You can run the demo in **two ways**:
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/neural_primitive/neural_primitive.git
-cd neural_primitive
-git lfs pull
+git clone git@github.com:neuralprimitives/neuralprimitives.github.io.git
+cd neuralprimitives.github.io && git lfs pull && cd demo
 ```
 
 ---
