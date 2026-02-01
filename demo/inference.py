@@ -14,7 +14,7 @@ from utils.config import cfg_from_yaml_file
 from datasets.io import IO
 from datasets.data_transforms import Compose
 
-DEFAULT_CFG = "./cfgs/BuildingNL_models/VecUnico_multi.yaml"
+DEFAULT_CFG = "./cfgs/BuildingNL_models/neural_primitive_multi.yaml"
 DEFAULT_CKPT = "./ckpt/checkpoint.pth"
 DEFAULT_DATA_ROOT = "./evaluation/pc"
 DEFAULT_OUTPUT_DIR = "./evaluation/vg"
