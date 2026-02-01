@@ -540,7 +540,12 @@ margin: 0 0 22px 0,
   text-decoration: none;
   border: 1px solid transparent;
   min-width: 110px;       /* 像截图一样两个按钮宽一致 */
-  text-align: center;
+  /* text-align: center; */
+   display: inline-flex;
+   align-items: center;  
+   justify-content: center;    /* ✅ 关键：水平居中（替代 text-align） */
+  gap: 0.35rem;               /* ✅ 图标和文字间距 */
+  text-align: left;           /* ✅ 防止跟 flex 打架（可不写，但建议） */
 }
 
 /* primary: blue Paper */
@@ -780,3 +785,4 @@ margin: 0 0 22px 0,
   background-color: #3e64ff;
   border-color: #3e64ff;
 } */
+
