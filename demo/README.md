@@ -66,9 +66,9 @@ Choose a transformation mode:
 * `rotation`
 
 ```bash
-conda activate vecunico \
-&& VECUNICO_TEST_ID=bag_0518100000337695 \
-&& VECUNICO_AUG_MODE=sim3 \
+conda activate neural_primitive \
+&& NEURALPRIMITIVE_TEST_ID=bag_0518100000337695 \
+&& NEURALPRIMITIVE_AUG_MODE=sim3 \
 python inference.py
 ```
 
@@ -150,7 +150,7 @@ bash ./scripts/dist_train.sh <NUM_GPU> <PORT> \
 
 ```bash
 bash ./scripts/dist_train.sh 2 12345 \
-    --config cfgs/BuildingNL_models/VecUnico_multi.yaml \
+    --config cfgs/BuildingNL_models/neural_primitive_multi.yaml \
     --exp_name neural_primitive
 ```
 

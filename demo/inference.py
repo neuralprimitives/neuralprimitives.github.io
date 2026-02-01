@@ -222,15 +222,15 @@ def inference_single(model, pc_file,data_root=DEFAULT_DATA_ROOT,out_dir=DEFAULT_
             np.savetxt(out_path, batch_instances)
             
 def main():
-    data_root = os.getenv("VECUNICO_DATA_ROOT", DEFAULT_DATA_ROOT)
-    out_dir = os.getenv("VECUNICO_OUTPUT_DIR", DEFAULT_OUTPUT_DIR)
+    data_root = os.getenv("NEURALPRIMITIVE_DATA_ROOT", DEFAULT_DATA_ROOT)
+    out_dir = os.getenv("NEURALPRIMITIVE_OUTPUT_DIR", DEFAULT_OUTPUT_DIR)
     device = DEFAULT_DEVICE
-    data_mode = os.getenv("VECUNICO_DATA_MODE", DEFAULT_DATA_MODE)
-    output_format = os.getenv("VECUNICO_OUTPUT_FORMAT", DEFAULT_OUTPUT_FORMAT).lower()
+    data_mode = os.getenv("NEURALPRIMITIVE_DATA_MODE", DEFAULT_DATA_MODE)
+    output_format = os.getenv("NEURALPRIMITIVE_OUTPUT_FORMAT", DEFAULT_OUTPUT_FORMAT).lower()
     config = load_config_with_fallback()
     base_model = build_model_from_config(config, ckpt_path=DEFAULT_CKPT, device=device)
-    aug_mode = os.getenv("VECUNICO_AUG_MODE", "no_agu")
-    test_id = os.getenv("VECUNICO_TEST_ID", "building_01")
+    aug_mode = os.getenv("NEURALPRIMITIVE_AUG_MODE", "no_agu")
+    test_id = os.getenv("NEURALPRIMITIVE_TEST_ID", "building_01")
     pc_file = os.path.join(data_root, f"{test_id}." + data_mode)
 
     inference_single(base_model, 

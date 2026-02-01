@@ -1,4 +1,4 @@
-name: vecunico
+name: neural_primitive
 channels:
   - pytorch
   - conda-forge
